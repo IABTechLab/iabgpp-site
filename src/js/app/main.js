@@ -71,7 +71,7 @@ async function init() {
   window.gvlV2Ca = await cmpApi.getGvlFromUrl({ baseUrl: "/vendorlist/v2/ca" });
   console.log(gvlV2Ca);
 
-  tcfEuV2PolicyVersionChanged(4);
+  tcfEuV2PolicyVersionChanged(5);
   tcfCaV1PolicyVersionChanged(2);
 
   let consentLanguageElements = [
