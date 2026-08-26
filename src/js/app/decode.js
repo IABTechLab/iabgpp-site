@@ -57,7 +57,7 @@ export function decode() {
         tcfEuV2PolicyVersionChanged(policyVersion);
       }
       if(policyVersion === 5 && !document.getElementById("tcfeuv2-policy-version-5").checked) {
-        document.getElementById("tcfeuv2-policy-version-2").checked = true;
+        document.getElementById("tcfeuv2-policy-version-5").checked = true;
         tcfEuV2PolicyVersionChanged(policyVersion);
       }
 
