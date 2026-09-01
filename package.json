@@ -11,6 +11,6 @@
   },
   "dependencies": {
     "@iabgpp/cmpapi": "^3.1.9",
-    "@iabgpp/stub": "^3.1.9"
+    "@iabgpp/stub": "^3.2.0"
   }
 }
