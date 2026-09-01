@@ -18,7 +18,7 @@ export function disableTcfEuV2(disabled) {
       "tcfeuv2-consent-language",
       "tcfeuv2-vendor-list-version",
       "tcfeuv2-policy-version-2",
-      "tcfeuv2-policy-version-4",
+      "tcfeuv2-policy-version-5",
       "tcfeuv2-is-service-specific",
       "tcfeuv2-use-non-standard-stacks",
       "tcfeuv2-special-feature-optins",

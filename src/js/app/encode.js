@@ -1,6 +1,7 @@
 export function encode() {
   let errors = [];
 
+  document.getElementById("tcf2-error-pane").value = "";
   cmpApi.clear();
   let sectionIds = [];
   if (document.getElementById("tcfeuv2-included").checked == true) {
@@ -10,7 +11,7 @@ export function encode() {
       Array.prototype.push.apply(errors, processNumericInput("tcfeuv2-consent-screen", "tcfeuv2", "ConsentScreen"));
       Array.prototype.push.apply(errors, processStringSelect("tcfeuv2-consent-language", "tcfeuv2", "ConsentLanguage"));
       Array.prototype.push.apply(errors, processNumericInput("tcfeuv2-vendor-list-version", "tcfeuv2", "VendorListVersion"));
-      Array.prototype.push.apply(errors, processNumericRadio(["tcfeuv2-policy-version-2","tcfeuv2-policy-version-4"], "tcfeuv2", "PolicyVersion"));
+      Array.prototype.push.apply(errors, processNumericRadio(["tcfeuv2-policy-version-2","tcfeuv2-policy-version-5"], "tcfeuv2", "PolicyVersion"));
       Array.prototype.push.apply(errors, processCheckbox("tcfeuv2-is-service-specific", "tcfeuv2", "IsServiceSpecific"));
       Array.prototype.push.apply(errors, processCheckbox("tcfeuv2-use-non-standard-stacks", "tcfeuv2", "UseNonStandardStacks"));
       Array.prototype.push.apply(errors, processBitfieldSelect("tcfeuv2-special-feature-optins", "tcfeuv2", "SpecialFeatureOptins"));

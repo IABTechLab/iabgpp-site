@@ -44,6 +44,9 @@ export function decode() {
 
     cmpApi.setGppString(gppString);
 
+    // clear error log
+    document.getElementById("tcf2-error-pane").value = "";
+
     if (cmpApi.hasSection("tcfeuv2")) {
       document.getElementById("tcfeuv2-included").checked = true;
       disableTcfEuV2(false);
@@ -53,8 +56,8 @@ export function decode() {
         document.getElementById("tcfeuv2-policy-version-2").checked = true;
         tcfEuV2PolicyVersionChanged(policyVersion);
       }
-      if(policyVersion === 4 && !document.getElementById("tcfeuv2-policy-version-4").checked) {
-        document.getElementById("tcfeuv2-policy-version-2").checked = true;
+      if(policyVersion === 5 && !document.getElementById("tcfeuv2-policy-version-5").checked) {
+        document.getElementById("tcfeuv2-policy-version-5").checked = true;
         tcfEuV2PolicyVersionChanged(policyVersion);
       }
 
@@ -198,6 +201,26 @@ export function decode() {
         document.getElementById("tcfeuv2-publisher-restrictions-container").removeAttribute("hidden");
       } else {
         document.getElementById("tcfeuv2-publisher-restrictions-container").setAttribute("hidden", "hidden");
+      }
+      // check for TCF V2.2 errors and print these if any are found
+      let strError = "We found errors in the TCF string:\n";
+      const len1 = strError.length;
+      if (policyVersion !== 5) {
+        strError = strError + "Invalid policy number: " + policyVersion + "\n";
+      }
+      if (cmpApi.getFieldValue("tcfeuv2", "IsServiceSpecific") === false) {
+        strError = strError + "Invalid value for IsServiceSpecific. IsServiceSpecific must be true" + "\n";
+      }
+      if (cmpApi.getFieldValue("tcfeuv2", "VendorsDisclosed").length === 0) {
+        strError = strError + "Missing or incorrect disclosed vendors section. Disclosed Vendors must be present and properly populated."+ "\n";
+      }
+
+      if (strError.length > len1) {
+        document.getElementById("tcf2-error-pane").style.color = "red";
+        document.getElementById("tcf2-error-pane").value = strError;
+      } else {
+        document.getElementById("tcf2-error-pane").style.color = "green";
+        document.getElementById("tcf2-error-pane").value = "TCF string is looking good.";
       }
     } else {
       document.getElementById("tcfeuv2-included").checked = false;

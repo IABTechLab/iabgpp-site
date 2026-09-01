@@ -26,7 +26,7 @@ export function tcfEuV2PolicyVersionChanged(value) {
 
   if(value === 2) {
     updateGvlRelatedElements(gvlV2, vendorListVersionElement, vendorListAvailableElements, vendorListIncludedElements, purposeElements,specialFeatureElements);
-  } else if(value === 4) {
+  } else if(value === 5) {
     updateGvlRelatedElements(gvlV3, vendorListVersionElement, vendorListAvailableElements, vendorListIncludedElements, purposeElements,specialFeatureElements);
   }
 }
