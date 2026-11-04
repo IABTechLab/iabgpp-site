@@ -904,6 +904,106 @@ export function decode() {
       disableusmn(true);
     }
 
+    if (cmpApi.hasSection("usmd")) {
+      document.getElementById("usmd-included").checked = true;
+      disableusmd(false);
+
+      document.getElementById("usmd-mspa-covered-transaction").value = cmpApi.getFieldValue("usmd", "MspaCoveredTransaction");
+      document.getElementById("usmd-mspa-mode").value = cmpApi.getFieldValue("usmd", "MspaMode");
+      document.getElementById("usmd-processing-notice").value = cmpApi.getFieldValue("usmd", "ProcessingNotice");
+      document.getElementById("usmd-sale-opt-out-notice").value = cmpApi.getFieldValue("usmd", "SaleOptOutNotice");
+      document.getElementById("usmd-targeted-advertising-opt-out-notice").value = cmpApi.getFieldValue("usmd", "TargetedAdvertisingOptOutNotice");
+      document.getElementById("usmd-sale-opt-out").value = cmpApi.getFieldValue("usmd", "SaleOptOut");
+      document.getElementById("usmd-targeted-advertising-opt-out").value = cmpApi.getFieldValue("usmd", "TargetedAdvertisingOptOut");
+      document.getElementById("usmd-additional-data-processing-consent").value = cmpApi.getFieldValue("usmd", "AdditionalDataProcessingConsent");
+      document.getElementById("usmd-gpc-segment-included").checked = cmpApi.getFieldValue("usmd", "GpcSegmentIncluded");
+      document.getElementById("usmd-gpc").checked = cmpApi.getFieldValue("usmd", "Gpc");
+    } else {
+      document.getElementById("usmd-included").checked = false;
+      disableusmd(true);
+    }
+
+    if (cmpApi.hasSection("usin")) {
+      document.getElementById("usin-included").checked = true;
+      disableusin(false);
+
+      document.getElementById("usin-mspa-covered-transaction").value = cmpApi.getFieldValue("usin", "MspaCoveredTransaction");
+      document.getElementById("usin-mspa-mode").value = cmpApi.getFieldValue("usin", "MspaMode");
+      document.getElementById("usin-processing-notice").value = cmpApi.getFieldValue("usin", "ProcessingNotice");
+      document.getElementById("usin-sale-opt-out-notice").value = cmpApi.getFieldValue("usin", "SaleOptOutNotice");
+      document.getElementById("usin-targeted-advertising-opt-out-notice").value = cmpApi.getFieldValue("usin", "TargetedAdvertisingOptOutNotice");
+      document.getElementById("usin-sale-opt-out").value = cmpApi.getFieldValue("usin", "SaleOptOut");
+      document.getElementById("usin-targeted-advertising-opt-out").value = cmpApi.getFieldValue("usin", "TargetedAdvertisingOptOut");
+      document.getElementById("usin-known-child-sensitive-data-consents").value = cmpApi.getFieldValue("usin", "KnownChildSensitiveDataConsents");
+      document.getElementById("usin-additional-data-processing-consent").value = cmpApi.getFieldValue("usin", "AdditionalDataProcessingConsent");
+      document.getElementById("usin-sensitive-data-consent-segment-included").checked = cmpApi.getFieldValue("usin", "SensitiveDataConsentSegmentIncluded");
+      document.getElementById("usin-sensitive-data-processing-0").value = cmpApi.getFieldValue("usin", "SensitiveDataProcessing")[0];
+      document.getElementById("usin-sensitive-data-processing-1").value = cmpApi.getFieldValue("usin", "SensitiveDataProcessing")[1];
+      document.getElementById("usin-sensitive-data-processing-2").value = cmpApi.getFieldValue("usin", "SensitiveDataProcessing")[2];
+      document.getElementById("usin-sensitive-data-processing-3").value = cmpApi.getFieldValue("usin", "SensitiveDataProcessing")[3];
+      document.getElementById("usin-sensitive-data-processing-4").value = cmpApi.getFieldValue("usin", "SensitiveDataProcessing")[4];
+      document.getElementById("usin-sensitive-data-processing-5").value = cmpApi.getFieldValue("usin", "SensitiveDataProcessing")[5];
+      document.getElementById("usin-sensitive-data-processing-6").value = cmpApi.getFieldValue("usin", "SensitiveDataProcessing")[6];
+      document.getElementById("usin-sensitive-data-processing-7").value = cmpApi.getFieldValue("usin", "SensitiveDataProcessing")[7];
+    } else {
+      document.getElementById("usin-included").checked = false;
+      disableusin(true);
+    }
+
+    if (cmpApi.hasSection("usky")) {
+      document.getElementById("usky-included").checked = true;
+      disableusky(false);
+
+      document.getElementById("usky-mspa-covered-transaction").value = cmpApi.getFieldValue("usky", "MspaCoveredTransaction");
+      document.getElementById("usky-mspa-mode").value = cmpApi.getFieldValue("usky", "MspaMode");
+      document.getElementById("usky-processing-notice").value = cmpApi.getFieldValue("usky", "ProcessingNotice");
+      document.getElementById("usky-sale-opt-out-notice").value = cmpApi.getFieldValue("usky", "SaleOptOutNotice");
+      document.getElementById("usky-targeted-advertising-opt-out-notice").value = cmpApi.getFieldValue("usky", "TargetedAdvertisingOptOutNotice");
+      document.getElementById("usky-sale-opt-out").value = cmpApi.getFieldValue("usky", "SaleOptOut");
+      document.getElementById("usky-targeted-advertising-opt-out").value = cmpApi.getFieldValue("usky", "TargetedAdvertisingOptOut");
+      document.getElementById("usky-known-child-sensitive-data-consents").value = cmpApi.getFieldValue("usky", "KnownChildSensitiveDataConsents");
+      document.getElementById("usky-additional-data-processing-consent").value = cmpApi.getFieldValue("usky", "AdditionalDataProcessingConsent");
+      document.getElementById("usky-sensitive-data-consent-segment-included").checked = cmpApi.getFieldValue("usky", "SensitiveDataConsentSegmentIncluded");
+      document.getElementById("usky-sensitive-data-processing-0").value = cmpApi.getFieldValue("usky", "SensitiveDataProcessing")[0];
+      document.getElementById("usky-sensitive-data-processing-1").value = cmpApi.getFieldValue("usky", "SensitiveDataProcessing")[1];
+      document.getElementById("usky-sensitive-data-processing-2").value = cmpApi.getFieldValue("usky", "SensitiveDataProcessing")[2];
+      document.getElementById("usky-sensitive-data-processing-3").value = cmpApi.getFieldValue("usky", "SensitiveDataProcessing")[3];
+      document.getElementById("usky-sensitive-data-processing-4").value = cmpApi.getFieldValue("usky", "SensitiveDataProcessing")[4];
+      document.getElementById("usky-sensitive-data-processing-5").value = cmpApi.getFieldValue("usky", "SensitiveDataProcessing")[5];
+      document.getElementById("usky-sensitive-data-processing-6").value = cmpApi.getFieldValue("usky", "SensitiveDataProcessing")[6];
+      document.getElementById("usky-sensitive-data-processing-7").value = cmpApi.getFieldValue("usky", "SensitiveDataProcessing")[7];
+    } else {
+      document.getElementById("usky-included").checked = false;
+      disableusky(true);
+    }
+
+    if (cmpApi.hasSection("usri")) {
+      document.getElementById("usri-included").checked = true;
+      disableusri(false);
+
+      document.getElementById("usri-mspa-covered-transaction").value = cmpApi.getFieldValue("usri", "MspaCoveredTransaction");
+      document.getElementById("usri-mspa-mode").value = cmpApi.getFieldValue("usri", "MspaMode");
+      document.getElementById("usri-processing-notice").value = cmpApi.getFieldValue("usri", "ProcessingNotice");
+      document.getElementById("usri-sale-opt-out-notice").value = cmpApi.getFieldValue("usri", "SaleOptOutNotice");
+      document.getElementById("usri-targeted-advertising-opt-out-notice").value = cmpApi.getFieldValue("usri", "TargetedAdvertisingOptOutNotice");
+      document.getElementById("usri-sale-opt-out").value = cmpApi.getFieldValue("usri", "SaleOptOut");
+      document.getElementById("usri-targeted-advertising-opt-out").value = cmpApi.getFieldValue("usri", "TargetedAdvertisingOptOut");
+      document.getElementById("usri-known-child-sensitive-data-consents").value = cmpApi.getFieldValue("usri", "KnownChildSensitiveDataConsents");
+      document.getElementById("usri-additional-data-processing-consent").value = cmpApi.getFieldValue("usri", "AdditionalDataProcessingConsent");
+      document.getElementById("usri-sensitive-data-consent-segment-included").checked = cmpApi.getFieldValue("usri", "SensitiveDataConsentSegmentIncluded");
+      document.getElementById("usri-sensitive-data-processing-0").value = cmpApi.getFieldValue("usri", "SensitiveDataProcessing")[0];
+      document.getElementById("usri-sensitive-data-processing-1").value = cmpApi.getFieldValue("usri", "SensitiveDataProcessing")[1];
+      document.getElementById("usri-sensitive-data-processing-2").value = cmpApi.getFieldValue("usri", "SensitiveDataProcessing")[2];
+      document.getElementById("usri-sensitive-data-processing-3").value = cmpApi.getFieldValue("usri", "SensitiveDataProcessing")[3];
+      document.getElementById("usri-sensitive-data-processing-4").value = cmpApi.getFieldValue("usri", "SensitiveDataProcessing")[4];
+      document.getElementById("usri-sensitive-data-processing-5").value = cmpApi.getFieldValue("usri", "SensitiveDataProcessing")[5];
+      document.getElementById("usri-sensitive-data-processing-6").value = cmpApi.getFieldValue("usri", "SensitiveDataProcessing")[6];
+      document.getElementById("usri-sensitive-data-processing-7").value = cmpApi.getFieldValue("usri", "SensitiveDataProcessing")[7];
+    } else {
+      document.getElementById("usri-included").checked = false;
+      disableusri(true);
+    }
+
     let obj = cmpApi.getObject();
     if(obj.tcfeuv2) {
       obj.tcfeuv2.Created = obj.tcfeuv2.Created.toJSON();

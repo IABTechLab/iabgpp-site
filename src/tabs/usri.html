@@ -1,0 +1,173 @@
+<div class="mt-3 mb-3 form-check">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    value=""
+    id="usri-included"
+    onclick="disableusri(!this.checked)"
+  />
+  <label class="form-check-label" for="usri-included">Included</label>
+</div>
+<div class="mb-3">
+  <label for="usri-version" class="form-label">Version</label>
+  <input type="text" id="usri-version" class="form-control" placeholder="1" value="1" disabled />
+</div>
+<div class="mb-3">
+  <label for="usri-mspa-covered-transaction" class="form-label">MSPA Covered Transaction</label>
+  <input
+    type="number"
+    min="1"
+    max="2"
+    id="usri-mspa-covered-transaction"
+    class="form-control"
+    placeholder="1"
+    value="1"
+    disabled
+  />
+  <div id="usri-mspa-covered-transaction-feedback" class="invalid-feedback">Valid values are 1-2</div>
+</div>
+<div class="mb-3">
+  <label for="usri-mspa-mode" class="form-label">MSPA Mode</label>
+  <input
+    type="number"
+    min="0"
+    max="2"
+    id="usri-mspa-mode"
+    class="form-control"
+    placeholder="0"
+    value="0"
+    disabled
+  />
+  <div id="usri-mspa-mode-feedback" class="invalid-feedback">Valid values are 0-2</div>
+</div>
+<div class="mb-3">
+  <label for="usri-processing-notice" class="form-label">Processing Notice</label>
+  <input
+    type="number"
+    min="0"
+    max="2"
+    id="usri-processing-notice"
+    class="form-control"
+    placeholder="0"
+    value="0"
+    disabled
+  />
+  <div id="usri-processing-notice-feedback" class="invalid-feedback">Valid values are 0-2</div>
+</div>
+<div class="mb-3">
+  <label for="usri-sale-opt-out-notice" class="form-label">Sale Opt Out Notice</label>
+  <input
+    type="number"
+    min="0"
+    max="2"
+    id="usri-sale-opt-out-notice"
+    class="form-control"
+    placeholder="0"
+    value="0"
+    disabled
+  />
+  <div id="usri-sale-opt-out-notice-feedback" class="invalid-feedback">Valid values are 0-2</div>
+</div>
+<div class="mb-3">
+  <label for="usri-targeted-advertising-opt-out-notice" class="form-label"
+    >Targeted Advertising Opt Out Notice</label
+  >
+  <input
+    type="number"
+    min="0"
+    max="2"
+    id="usri-targeted-advertising-opt-out-notice"
+    class="form-control"
+    placeholder="0"
+    value="0"
+    disabled
+  />
+  <div id="usri-targeted-advertising-opt-out-notice-feedback" class="invalid-feedback">
+    Valid values are 0-2
+  </div>
+</div>
+<div class="mb-3">
+  <label for="usri-sale-opt-out" class="form-label">Sale Opt Out</label>
+  <input
+    type="number"
+    min="0"
+    max="2"
+    id="usri-sale-opt-out"
+    class="form-control"
+    placeholder="0"
+    value="0"
+    disabled
+  />
+  <div id="usri-sale-opt-out-feedback" class="invalid-feedback">Valid values are 0-2</div>
+</div>
+<div class="mb-3">
+  <label for="usri-targeted-advertising-opt-out" class="form-label"
+    >Targeted Advertising Opt Out</label
+  >
+  <input
+    type="number"
+    min="0"
+    max="2"
+    id="usri-targeted-advertising-opt-out"
+    class="form-control"
+    placeholder="0"
+    value="0"
+    disabled
+  />
+  <div id="usri-targeted-advertising-opt-out-feedback" class="invalid-feedback">
+    Valid values are 0-2
+  </div>
+</div>
+<div class="mb-3">
+  <label for="usri-known-child-sensitive-data-consents" class="form-label"
+    >Known Child Sensitive Data Consents</label
+  >
+  <input
+    type="number"
+    min="0"
+    max="2"
+    id="usri-known-child-sensitive-data-consents"
+    class="form-control"
+    placeholder="0"
+    value="0"
+    disabled
+  />
+  <div id="usri-known-child-sensitive-data-consents-feedback" class="invalid-feedback">
+    Valid values are 0-2
+  </div>
+</div>
+<div class="mb-3">
+  <label for="usri-additional-data-processing-consent" class="form-label"
+    >Additional Data Processing Consent</label
+  >
+  <input
+    type="number"
+    min="0"
+    max="2"
+    id="usri-additional-data-processing-consent"
+    class="form-control"
+    placeholder="0"
+    value="0"
+    disabled
+  />
+  <div id="usri-additional-data-processing-consent-feedback" class="invalid-feedback">
+    Valid values are 0-2
+  </div>
+</div>
+<div class="mb-3 form-check">
+  <input class="form-check-input" type="checkbox" value="" id="usri-sensitive-data-consent-segment-included" checked disabled />
+  <label class="form-check-label" for="usri-sensitive-data-consent-segment-included">Sensitive Data Consent Segment Included</label>
+</div>
+<div class="mb-3">
+  <label for="usri-sensitive-data-processing-0" class="form-label">Sensitive Data Processing</label>
+  <div class="input-group">
+    <input type="number" min="0" max="2" id="usri-sensitive-data-processing-0" class="form-control" placeholder="0" value="0" disabled />
+    <input type="number" min="0" max="2" id="usri-sensitive-data-processing-1" class="form-control" placeholder="0" value="0" disabled />
+    <input type="number" min="0" max="2" id="usri-sensitive-data-processing-2" class="form-control" placeholder="0" value="0" disabled />
+    <input type="number" min="0" max="2" id="usri-sensitive-data-processing-3" class="form-control" placeholder="0" value="0" disabled />
+    <input type="number" min="0" max="2" id="usri-sensitive-data-processing-4" class="form-control" placeholder="0" value="0" disabled />
+    <input type="number" min="0" max="2" id="usri-sensitive-data-processing-5" class="form-control" placeholder="0" value="0" disabled />
+    <input type="number" min="0" max="2" id="usri-sensitive-data-processing-6" class="form-control" placeholder="0" value="0" disabled />
+    <input type="number" min="0" max="2" id="usri-sensitive-data-processing-7" class="form-control" placeholder="0" value="0" disabled />
+  </div>
+</div>

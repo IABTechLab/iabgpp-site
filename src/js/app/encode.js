@@ -1207,6 +1207,162 @@ export function encode() {
     Array.prototype.push.apply(errors, processCheckbox("usmn-gpc", "usmn", "Gpc"));
   }
 
+  if (document.getElementById("usmd-included").checked == true) {
+    sectionIds.push(24);
+
+    Array.prototype.push.apply(errors, processNumericInput("usmd-mspa-covered-transaction", "usmd", "MspaCoveredTransaction"));
+    Array.prototype.push.apply(errors, processNumericInput("usmd-mspa-mode", "usmd", "MspaMode"));
+    Array.prototype.push.apply(errors, processNumericInput("usmd-processing-notice", "usmd", "ProcessingNotice"));
+    Array.prototype.push.apply(errors, processNumericInput("usmd-sale-opt-out-notice", "usmd", "SaleOptOutNotice"));
+    Array.prototype.push.apply(
+      errors,
+      processNumericInput("usmd-targeted-advertising-opt-out-notice", "usmd", "TargetedAdvertisingOptOutNotice")
+    );
+    Array.prototype.push.apply(errors, processNumericInput("usmd-sale-opt-out", "usmd", "SaleOptOut"));
+    Array.prototype.push.apply(
+      errors,
+      processNumericInput("usmd-targeted-advertising-opt-out", "usmd", "TargetedAdvertisingOptOut")
+    );
+    Array.prototype.push.apply(
+      errors,
+      processNumericInput("usmd-additional-data-processing-consent", "usmd", "AdditionalDataProcessingConsent")
+    );
+    Array.prototype.push.apply(errors, processCheckbox("usmd-gpc-segment-included", "usmd", "GpcSegmentIncluded"));
+    Array.prototype.push.apply(errors, processCheckbox("usmd-gpc", "usmd", "Gpc"));
+  }
+
+  if (document.getElementById("usin-included").checked == true) {
+    sectionIds.push(25);
+
+    Array.prototype.push.apply(errors, processNumericInput("usin-mspa-covered-transaction", "usin", "MspaCoveredTransaction"));
+    Array.prototype.push.apply(errors, processNumericInput("usin-mspa-mode", "usin", "MspaMode"));
+    Array.prototype.push.apply(errors, processNumericInput("usin-processing-notice", "usin", "ProcessingNotice"));
+    Array.prototype.push.apply(errors, processNumericInput("usin-sale-opt-out-notice", "usin", "SaleOptOutNotice"));
+    Array.prototype.push.apply(
+      errors,
+      processNumericInput("usin-targeted-advertising-opt-out-notice", "usin", "TargetedAdvertisingOptOutNotice")
+    );
+    Array.prototype.push.apply(errors, processNumericInput("usin-sale-opt-out", "usin", "SaleOptOut"));
+    Array.prototype.push.apply(
+      errors,
+      processNumericInput("usin-targeted-advertising-opt-out", "usin", "TargetedAdvertisingOptOut")
+    );
+    Array.prototype.push.apply(
+      errors,
+      processNumericInput("usin-known-child-sensitive-data-consents", "usin", "KnownChildSensitiveDataConsents")
+    );
+    Array.prototype.push.apply(
+      errors,
+      processNumericInput("usin-additional-data-processing-consent", "usin", "AdditionalDataProcessingConsent")
+    );
+    Array.prototype.push.apply(errors, processCheckbox("usin-sensitive-data-consent-segment-included", "usin", "SensitiveDataConsentSegmentIncluded"));
+    Array.prototype.push.apply(
+      errors,
+      processNumericInputs(
+        [
+          "usin-sensitive-data-processing-0",
+          "usin-sensitive-data-processing-1",
+          "usin-sensitive-data-processing-2",
+          "usin-sensitive-data-processing-3",
+          "usin-sensitive-data-processing-4",
+          "usin-sensitive-data-processing-5",
+          "usin-sensitive-data-processing-6",
+          "usin-sensitive-data-processing-7",
+        ],
+        "usin",
+        "SensitiveDataProcessing"
+      )
+    );
+  }
+
+  if (document.getElementById("usky-included").checked == true) {
+    sectionIds.push(26);
+
+    Array.prototype.push.apply(errors, processNumericInput("usky-mspa-covered-transaction", "usky", "MspaCoveredTransaction"));
+    Array.prototype.push.apply(errors, processNumericInput("usky-mspa-mode", "usky", "MspaMode"));
+    Array.prototype.push.apply(errors, processNumericInput("usky-processing-notice", "usky", "ProcessingNotice"));
+    Array.prototype.push.apply(errors, processNumericInput("usky-sale-opt-out-notice", "usky", "SaleOptOutNotice"));
+    Array.prototype.push.apply(
+      errors,
+      processNumericInput("usky-targeted-advertising-opt-out-notice", "usky", "TargetedAdvertisingOptOutNotice")
+    );
+    Array.prototype.push.apply(errors, processNumericInput("usky-sale-opt-out", "usky", "SaleOptOut"));
+    Array.prototype.push.apply(
+      errors,
+      processNumericInput("usky-targeted-advertising-opt-out", "usky", "TargetedAdvertisingOptOut")
+    );
+    Array.prototype.push.apply(
+      errors,
+      processNumericInput("usky-known-child-sensitive-data-consents", "usky", "KnownChildSensitiveDataConsents")
+    );
+    Array.prototype.push.apply(
+      errors,
+      processNumericInput("usky-additional-data-processing-consent", "usky", "AdditionalDataProcessingConsent")
+    );
+    Array.prototype.push.apply(errors, processCheckbox("usky-sensitive-data-consent-segment-included", "usky", "SensitiveDataConsentSegmentIncluded"));
+    Array.prototype.push.apply(
+      errors,
+      processNumericInputs(
+        [
+          "usky-sensitive-data-processing-0",
+          "usky-sensitive-data-processing-1",
+          "usky-sensitive-data-processing-2",
+          "usky-sensitive-data-processing-3",
+          "usky-sensitive-data-processing-4",
+          "usky-sensitive-data-processing-5",
+          "usky-sensitive-data-processing-6",
+          "usky-sensitive-data-processing-7",
+        ],
+        "usky",
+        "SensitiveDataProcessing"
+      )
+    );
+  }
+
+  if (document.getElementById("usri-included").checked == true) {
+    sectionIds.push(27);
+
+    Array.prototype.push.apply(errors, processNumericInput("usri-mspa-covered-transaction", "usri", "MspaCoveredTransaction"));
+    Array.prototype.push.apply(errors, processNumericInput("usri-mspa-mode", "usri", "MspaMode"));
+    Array.prototype.push.apply(errors, processNumericInput("usri-processing-notice", "usri", "ProcessingNotice"));
+    Array.prototype.push.apply(errors, processNumericInput("usri-sale-opt-out-notice", "usri", "SaleOptOutNotice"));
+    Array.prototype.push.apply(
+      errors,
+      processNumericInput("usri-targeted-advertising-opt-out-notice", "usri", "TargetedAdvertisingOptOutNotice")
+    );
+    Array.prototype.push.apply(errors, processNumericInput("usri-sale-opt-out", "usri", "SaleOptOut"));
+    Array.prototype.push.apply(
+      errors,
+      processNumericInput("usri-targeted-advertising-opt-out", "usri", "TargetedAdvertisingOptOut")
+    );
+    Array.prototype.push.apply(
+      errors,
+      processNumericInput("usri-known-child-sensitive-data-consents", "usri", "KnownChildSensitiveDataConsents")
+    );
+    Array.prototype.push.apply(
+      errors,
+      processNumericInput("usri-additional-data-processing-consent", "usri", "AdditionalDataProcessingConsent")
+    );
+    Array.prototype.push.apply(errors, processCheckbox("usri-sensitive-data-consent-segment-included", "usri", "SensitiveDataConsentSegmentIncluded"));
+    Array.prototype.push.apply(
+      errors,
+      processNumericInputs(
+        [
+          "usri-sensitive-data-processing-0",
+          "usri-sensitive-data-processing-1",
+          "usri-sensitive-data-processing-2",
+          "usri-sensitive-data-processing-3",
+          "usri-sensitive-data-processing-4",
+          "usri-sensitive-data-processing-5",
+          "usri-sensitive-data-processing-6",
+          "usri-sensitive-data-processing-7",
+        ],
+        "usri",
+        "SensitiveDataProcessing"
+      )
+    );
+  }
+
   cmpApi.setApplicableSections(sectionIds);
 
   if (errors.length == 0) {

@@ -1,0 +1,146 @@
+<div class="mt-3 mb-3 form-check">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    value=""
+    id="usmd-included"
+    onclick="disableusmd(!this.checked)"
+  />
+  <label class="form-check-label" for="usmd-included">Included</label>
+</div>
+<div class="mb-3">
+  <label for="usmd-version" class="form-label">Version</label>
+  <input type="text" id="usmd-version" class="form-control" placeholder="1" value="1" disabled />
+</div>
+<div class="mb-3">
+  <label for="usmd-mspa-covered-transaction" class="form-label">MSPA Covered Transaction</label>
+  <input
+    type="number"
+    min="1"
+    max="2"
+    id="usmd-mspa-covered-transaction"
+    class="form-control"
+    placeholder="1"
+    value="1"
+    disabled
+  />
+  <div id="usmd-mspa-covered-transaction-feedback" class="invalid-feedback">Valid values are 1-2</div>
+</div>
+<div class="mb-3">
+  <label for="usmd-mspa-mode" class="form-label">MSPA Mode</label>
+  <input
+    type="number"
+    min="0"
+    max="2"
+    id="usmd-mspa-mode"
+    class="form-control"
+    placeholder="0"
+    value="0"
+    disabled
+  />
+  <div id="usmd-mspa-mode-feedback" class="invalid-feedback">Valid values are 0-2</div>
+</div>
+<div class="mb-3">
+  <label for="usmd-processing-notice" class="form-label">Processing Notice</label>
+  <input
+    type="number"
+    min="0"
+    max="2"
+    id="usmd-processing-notice"
+    class="form-control"
+    placeholder="0"
+    value="0"
+    disabled
+  />
+  <div id="usmd-processing-notice-feedback" class="invalid-feedback">Valid values are 0-2</div>
+</div>
+<div class="mb-3">
+  <label for="usmd-sale-opt-out-notice" class="form-label">Sale Opt Out Notice</label>
+  <input
+    type="number"
+    min="0"
+    max="2"
+    id="usmd-sale-opt-out-notice"
+    class="form-control"
+    placeholder="0"
+    value="0"
+    disabled
+  />
+  <div id="usmd-sale-opt-out-notice-feedback" class="invalid-feedback">Valid values are 0-2</div>
+</div>
+<div class="mb-3">
+  <label for="usmd-targeted-advertising-opt-out-notice" class="form-label"
+    >Targeted Advertising Opt Out Notice</label
+  >
+  <input
+    type="number"
+    min="0"
+    max="2"
+    id="usmd-targeted-advertising-opt-out-notice"
+    class="form-control"
+    placeholder="0"
+    value="0"
+    disabled
+  />
+  <div id="usmd-targeted-advertising-opt-out-notice-feedback" class="invalid-feedback">
+    Valid values are 0-2
+  </div>
+</div>
+<div class="mb-3">
+  <label for="usmd-sale-opt-out" class="form-label">Sale Opt Out</label>
+  <input
+    type="number"
+    min="0"
+    max="2"
+    id="usmd-sale-opt-out"
+    class="form-control"
+    placeholder="0"
+    value="0"
+    disabled
+  />
+  <div id="usmd-sale-opt-out-feedback" class="invalid-feedback">Valid values are 0-2</div>
+</div>
+<div class="mb-3">
+  <label for="usmd-targeted-advertising-opt-out" class="form-label"
+    >Targeted Advertising Opt Out</label
+  >
+  <input
+    type="number"
+    min="0"
+    max="2"
+    id="usmd-targeted-advertising-opt-out"
+    class="form-control"
+    placeholder="0"
+    value="0"
+    disabled
+  />
+  <div id="usmd-targeted-advertising-opt-out-feedback" class="invalid-feedback">
+    Valid values are 0-2
+  </div>
+</div>
+<div class="mb-3">
+  <label for="usmd-additional-data-processing-consent" class="form-label"
+    >Additional Data Processing Consent</label
+  >
+  <input
+    type="number"
+    min="0"
+    max="2"
+    id="usmd-additional-data-processing-consent"
+    class="form-control"
+    placeholder="0"
+    value="0"
+    disabled
+  />
+  <div id="usmd-additional-data-processing-consent-feedback" class="invalid-feedback">
+    Valid values are 0-2
+  </div>
+</div>
+<div class="mb-3 form-check">
+  <input class="form-check-input" type="checkbox" value="" id="usmd-gpc-segment-included" checked disabled />
+  <label class="form-check-label" for="usmd-gpc-segment-included">GPC Segment Included</label>
+</div>
+<div class="mb-3 form-check">
+  <input class="form-check-input" type="checkbox" value="" id="usmd-gpc" disabled />
+  <label class="form-check-label" for="usmd-gpc">GPC Enabled</label>
+</div>

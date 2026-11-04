@@ -670,3 +670,115 @@ export function disableusmn(disabled) {
   );
 }
 window.disableusmn = disableusmn;
+
+export function disableusmd(disabled) {
+  document.getElementById("header-usmd").checked = !disabled;
+  document.getElementById("usmd-included").checked = !disabled;
+
+  disableAll(
+    [
+      "usmd-mspa-covered-transaction",
+      "usmd-mspa-mode",
+      "usmd-processing-notice",
+      "usmd-sale-opt-out-notice",
+      "usmd-targeted-advertising-opt-out-notice",
+      "usmd-sale-opt-out",
+      "usmd-targeted-advertising-opt-out",
+      "usmd-additional-data-processing-consent",
+      "usmd-gpc-segment-included",
+      "usmd-gpc",
+    ],
+    disabled
+  );
+}
+window.disableusmd = disableusmd;
+
+export function disableusin(disabled) {
+  document.getElementById("header-usin").checked = !disabled;
+  document.getElementById("usin-included").checked = !disabled;
+
+  disableAll(
+    [
+      "usin-mspa-covered-transaction",
+      "usin-mspa-mode",
+      "usin-processing-notice",
+      "usin-sale-opt-out-notice",
+      "usin-targeted-advertising-opt-out-notice",
+      "usin-sale-opt-out",
+      "usin-targeted-advertising-opt-out",
+      "usin-known-child-sensitive-data-consents",
+      "usin-additional-data-processing-consent",
+      "usin-sensitive-data-consent-segment-included",
+      "usin-sensitive-data-processing-0",
+      "usin-sensitive-data-processing-1",
+      "usin-sensitive-data-processing-2",
+      "usin-sensitive-data-processing-3",
+      "usin-sensitive-data-processing-4",
+      "usin-sensitive-data-processing-5",
+      "usin-sensitive-data-processing-6",
+      "usin-sensitive-data-processing-7",
+    ],
+    disabled
+  );
+}
+window.disableusin = disableusin;
+
+export function disableusky(disabled) {
+  document.getElementById("header-usky").checked = !disabled;
+  document.getElementById("usky-included").checked = !disabled;
+
+  disableAll(
+    [
+      "usky-mspa-covered-transaction",
+      "usky-mspa-mode",
+      "usky-processing-notice",
+      "usky-sale-opt-out-notice",
+      "usky-targeted-advertising-opt-out-notice",
+      "usky-sale-opt-out",
+      "usky-targeted-advertising-opt-out",
+      "usky-known-child-sensitive-data-consents",
+      "usky-additional-data-processing-consent",
+      "usky-sensitive-data-consent-segment-included",
+      "usky-sensitive-data-processing-0",
+      "usky-sensitive-data-processing-1",
+      "usky-sensitive-data-processing-2",
+      "usky-sensitive-data-processing-3",
+      "usky-sensitive-data-processing-4",
+      "usky-sensitive-data-processing-5",
+      "usky-sensitive-data-processing-6",
+      "usky-sensitive-data-processing-7",
+    ],
+    disabled
+  );
+}
+window.disableusky = disableusky;
+
+export function disableusri(disabled) {
+  document.getElementById("header-usri").checked = !disabled;
+  document.getElementById("usri-included").checked = !disabled;
+
+  disableAll(
+    [
+      "usri-mspa-covered-transaction",
+      "usri-mspa-mode",
+      "usri-processing-notice",
+      "usri-sale-opt-out-notice",
+      "usri-targeted-advertising-opt-out-notice",
+      "usri-sale-opt-out",
+      "usri-targeted-advertising-opt-out",
+      "usri-known-child-sensitive-data-consents",
+      "usri-additional-data-processing-consent",
+      "usri-sensitive-data-consent-segment-included",
+      "usri-sensitive-data-processing-0",
+      "usri-sensitive-data-processing-1",
+      "usri-sensitive-data-processing-2",
+      "usri-sensitive-data-processing-3",
+      "usri-sensitive-data-processing-4",
+      "usri-sensitive-data-processing-5",
+      "usri-sensitive-data-processing-6",
+      "usri-sensitive-data-processing-7",
+    ],
+    disabled
+  );
+}
+window.disableusri = disableusri;
